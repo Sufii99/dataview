@@ -1,0 +1,21 @@
+<div class="devise-container">
+  <div class="devise-form">
+    <h2>Restablecer Contraseña</h2>
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name)) do |f| %>
+      <%= f.hidden_field :reset_password_token, value: params[:reset_password_token] %>
+
+      <%= f.label :password, "Nueva contraseña" %>
+      <%= f.password_field :password, required: true %>
+
+      <%= f.label :password_confirmation, "Confirmar nueva contraseña" %>
+      <%= f.password_field :password_confirmation, required: true %>
+
+      <%= f.submit "Actualizar Contraseña", class: "btn-primary" %>
+    <% end %>
+
+    <div class="devise-links">
+      <%= link_to "Volver al inicio de sesión", new_session_path(resource_name) %>
+    </div>
+  </div>
+</div>

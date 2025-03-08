@@ -1,0 +1,25 @@
+<% flash.each do |key, value| %>
+  <div id="flash-alert" class="alert alert-<%= key %> show">
+    <%= value %>
+  </div>
+<% end %>
+
+<%= form_with scope: :contact_form, url: contact_form_index_path, method: :post, local: true, class: "contact_for" do |form| %>
+  <div class="con_div">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "con_ctrl" %>
+  </div>
+  <div class="con_div">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class: "con_ctrl" %>
+  </div>
+  <div class="con_div">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "con_ctrl" %>
+  </div>
+  <div class="con_div">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "con_ctrl" %>
+  </div>
+  <%= form.submit "Submit", class: "contact_btn" %>
+<% end %>

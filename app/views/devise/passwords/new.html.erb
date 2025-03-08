@@ -1,0 +1,17 @@
+<div class="devise-container">
+  <div class="devise-form">
+    <h2>Recuperar Contraseña</h2>
+    <p>Introduce tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+    
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name)) do |f| %>
+      <%= f.label :email, "Correo electrónico" %>
+      <%= f.email_field :email, required: true %>
+
+      <%= f.submit "Enviar instrucciones", class: "btn-primary" %>
+    <% end %>
+
+    <div class="devise-links">
+      <%= link_to "Volver al inicio de sesión", new_session_path(resource_name) %>
+    </div>
+  </div>
+</div>

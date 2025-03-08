@@ -1,0 +1,108 @@
+/* Contenedor principal del formulario */
+.contact_for {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;  /* Asegura que el formulario se centre en la pantalla */
+    margin-top: 120px; /* Ajuste para evitar que el formulario se solape con la cabecera */
+}
+
+/* Estilos generales de la alerta centrada */
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 9999; /* Asegura que la alerta esté por encima de otros elementos */
+}
+
+.alert.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos para las alertas según el tipo */
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Estilos generales del formulario */
+.con_div {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Estilo para las etiquetas */
+.con_div label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Estilo para los campos de texto y área de texto */
+.con_ctrl {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.con_ctrl:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo para el botón de enviar */
+.contact_btn {
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 500px;  /* Limita el tamaño del botón */
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.contact_btn:hover {
+    background-color: #0056b3;
+}
+
+/* Resposive: Asegura que el formulario se ajuste a pantallas pequeñas */
+@media (max-width: 600px) {
+    .con_div {
+        width: 90%;
+    }
+
+    .contact_btn {
+        width: 90%;
+    }
+}

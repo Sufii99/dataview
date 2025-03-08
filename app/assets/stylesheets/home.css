@@ -1,0 +1,152 @@
+/* Estilos para la pagina principal */
+
+/* General */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo general de las secciones */
+.home-container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección Hero - ajustamos el margen superior */
+.hero {
+    background: linear-gradient(135deg, #00c6ff, #007bff);
+    color: white;
+    padding: 100px 20px;
+    margin-top: 120px; /* Espacio entre la cabecera y la sección */
+    margin-bottom: 80px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero .hero_btn {
+    background-color: #ffc107;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero .hero_btn:hover {
+    background-color: #e0a800;
+}
+
+/* Sección de Características */
+.feat {
+    background-color: #f4f7fb;
+    padding: 80px 20px;
+    margin-bottom: 80px;
+}
+
+.feat h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Sección de Testimonios */
+.test {
+    padding: 80px 20px;
+    background-color: #e9ecef;
+    margin-bottom: 80px;
+}
+
+.test h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.test blockquote {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Sección de CTA */
+.cta {
+    background-color: #007bff;
+    color: white;
+    padding: 80px 20px;
+    margin-bottom: 80px;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Sección sobre nosotros */
+.about {
+    padding: 80px 20px;
+    margin-bottom: 80px;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Sección de Contacto */
+.cont {
+    padding: 80px 20px;
+    margin-bottom: 80px;
+}
+
+.cont h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Animaciones */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
